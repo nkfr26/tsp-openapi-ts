@@ -1,10 +1,18 @@
 import { Hono } from "hono";
-import { components, paths } from "@workspace/openapi-typescript/src/schema";
+import {
+  components,
+  paths,
+} from "@workspace/tsp-openapi-ts/openapi-ts-output/schema";
 import { cors } from "hono/cors";
+import openApiDoc from "@workspace/tsp-openapi-ts/tsp-output/schema/openapi.json";
+import { swaggerUI } from "@hono/swagger-ui";
 
 const app = new Hono();
 
 app.use("/*", cors());
+
+app.get("/doc", (c) => c.json(openApiDoc));
+app.get("/ui", swaggerUI({ url: "/doc" }));
 
 app.get("/widgets", (c) => {
   try {

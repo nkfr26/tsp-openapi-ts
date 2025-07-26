@@ -1,0 +1,21 @@
+{
+  "name": "@workspace/tsp-openapi-ts",
+  "version": "0.1.0",
+  "type": "module",
+  "private": true,
+  "scripts": {
+    "tsp-openapi-ts": "tsp compile . && npx openapi-typescript ./tsp-output/schema/openapi.json -o ./openapi-ts-output/schema.d.ts"
+  },
+  "dependencies": {
+    "@types/node": "^20.17.19",
+    "@typespec/compiler": "latest",
+    "@typespec/http": "latest",
+    "@typespec/openapi": "latest",
+    "@typespec/openapi3": "latest",
+    "@typespec/rest": "latest"
+  },
+  "devDependencies": {
+    "openapi-typescript": "^7.8.0",
+    "typescript": "^5.8.3"
+  }
+}

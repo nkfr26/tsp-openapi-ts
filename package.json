@@ -6,7 +6,8 @@
     "build": "turbo build",
     "dev": "turbo dev",
     "lint": "turbo lint",
-    "format": "prettier --write \"**/*.{ts,tsx,md}\""
+    "format": "prettier --write \"**/*.{ts,tsx,md}\"",
+    "tsp-openapi-ts": "turbo run tsp-openapi-ts"
   },
   "devDependencies": {
     "@workspace/eslint-config": "workspace:*",

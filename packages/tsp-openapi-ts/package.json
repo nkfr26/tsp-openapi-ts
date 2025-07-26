@@ -4,7 +4,7 @@
   "type": "module",
   "private": true,
   "scripts": {
-    "tsp-openapi-ts": "tsp compile . && npx openapi-typescript ./tsp-output/schema/openapi.json -o ./openapi-ts-output/schema.d.ts"
+    "tsp-openapi-ts": "tsp compile . && pnpm dlx openapi-typescript ./tsp-output/schema/openapi.json -o ./openapi-ts-output/schema.d.ts"
   },
   "dependencies": {
     "@types/node": "^20.17.19",

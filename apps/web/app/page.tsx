@@ -2,7 +2,7 @@
 
 import createFetchClient from "openapi-fetch";
 import createClient from "openapi-react-query";
-import type { paths } from "@workspace/openapi-typescript/src/schema";
+import type { paths } from "@workspace/tsp-openapi-ts/openapi-ts-output/schema";
 
 const fetchClient = createFetchClient<paths>({
   baseUrl: "http://localhost:8787",

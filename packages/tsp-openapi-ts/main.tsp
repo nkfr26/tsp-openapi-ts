@@ -5,6 +5,7 @@ using Http;
 namespace DemoService;
 
 model Widget {
+  @removeVisibility(Lifecycle.Create, Lifecycle.Update)
   id: string;
   weight: int32;
   color: "red" | "blue";

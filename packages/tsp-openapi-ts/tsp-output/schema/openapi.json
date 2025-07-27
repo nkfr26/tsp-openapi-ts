@@ -75,7 +75,7 @@
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/Widget"
+                "$ref": "#/components/schemas/WidgetCreate"
               }
             }
           }
@@ -303,6 +303,26 @@
           }
         }
       },
+      "WidgetCreate": {
+        "type": "object",
+        "required": [
+          "weight",
+          "color"
+        ],
+        "properties": {
+          "weight": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "color": {
+            "type": "string",
+            "enum": [
+              "red",
+              "blue"
+            ]
+          }
+        }
+      },
       "WidgetList": {
         "type": "object",
         "required": [
@@ -320,9 +340,6 @@
       "WidgetMergePatchUpdate": {
         "type": "object",
         "properties": {
-          "id": {
-            "type": "string"
-          },
           "weight": {
             "type": "integer",
             "format": "int32"

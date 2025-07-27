@@ -78,11 +78,16 @@ export interface components {
             /** @enum {string} */
             color: "red" | "blue";
         };
+        WidgetCreate: {
+            /** Format: int32 */
+            weight: number;
+            /** @enum {string} */
+            color: "red" | "blue";
+        };
         WidgetList: {
             items: components["schemas"]["Widget"][];
         };
         WidgetMergePatchUpdate: {
-            id?: string;
             /** Format: int32 */
             weight?: number;
             /** @enum {string} */
@@ -135,7 +140,7 @@ export interface operations {
         };
         requestBody: {
             content: {
-                "application/json": components["schemas"]["Widget"];
+                "application/json": components["schemas"]["WidgetCreate"];
             };
         };
         responses: {

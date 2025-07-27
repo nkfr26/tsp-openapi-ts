@@ -1,18 +1,22 @@
-"use client";
+// "use client";
 
 import createFetchClient from "openapi-fetch";
-import createClient from "openapi-react-query";
+// import createClient from "openapi-react-query";
 import type { paths } from "@workspace/tsp-openapi-ts/openapi-ts-output/schema";
 
 const fetchClient = createFetchClient<paths>({
   baseUrl: "http://localhost:8787",
 });
-const $api = createClient(fetchClient);
+// const $api = createClient(fetchClient);
 
-export default function Page() {
-  const { data, error, isLoading } = $api.useQuery("get", "/widgets");
+export default async function Page() {
+  // const { data, error, isLoading } = $api.useQuery("get", "/widgets");
 
-  if (isLoading || !data) return "Loading...";
+  // if (isLoading || !data) return "Loading...";
+
+  // if (error) return `An error occured: ${error.message}`;
+
+  const { data, error } = await fetchClient.GET("/widgets");
 
   if (error) return `An error occured: ${error.message}`;
 

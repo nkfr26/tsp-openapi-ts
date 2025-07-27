@@ -7,7 +7,6 @@
     "tsp-openapi-ts": "tsp compile . && pnpm dlx openapi-typescript ./tsp-output/schema/openapi.json -o ./openapi-ts-output/schema.d.ts"
   },
   "dependencies": {
-    "@types/node": "^20.17.19",
     "@typespec/compiler": "latest",
     "@typespec/http": "latest",
     "@typespec/openapi": "latest",

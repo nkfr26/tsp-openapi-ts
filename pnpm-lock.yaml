@@ -136,9 +136,6 @@ importers:
 
   packages/tsp-openapi-ts:
     dependencies:
-      '@types/node':
-        specifier: ^20.17.19
-        version: 20.17.19
       '@typespec/compiler':
         specifier: latest
         version: 1.2.1(@types/node@20.17.19)

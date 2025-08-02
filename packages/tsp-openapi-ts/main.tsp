@@ -41,5 +41,5 @@ interface Widgets {
   @delete delete(@path id: string): void | Error;
 
   /** Analyze a widget */
-  @route("{id}/analyze") @post analyze(@path id: string): AnalyzeResult | Error;
+  @route("/{id}/analyze") @post analyze(@path id: string): AnalyzeResult | Error;
 }

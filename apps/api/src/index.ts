@@ -16,6 +16,7 @@ app.get("/ui", swaggerUI({ url: "/doc" }));
 
 app.get("/widgets", (c) => {
   try {
+    // throw new Error();
     return c.json<
       paths["/widgets"]["get"]["responses"]["200"]["content"]["application/json"]
     >({
@@ -25,7 +26,7 @@ app.get("/widgets", (c) => {
     return c.json<components["schemas"]["Error"]>({
       code: 500,
       message: "エラーが発生しました",
-    });
+    }, 500);
   }
 });
 

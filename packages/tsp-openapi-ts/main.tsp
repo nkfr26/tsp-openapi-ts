@@ -31,7 +31,7 @@ model AnalyzeResult {
 interface Widgets {
   /** List widgets */
   @get list(): WidgetList | Error;
-  /** Read widgets */
+  /** Read a widget */
   @get read(@path id: string): Widget | Error;
   /** Create a widget */
   @post create(@body body: Widget): Widget | Error;
@@ -41,5 +41,5 @@ interface Widgets {
   @delete delete(@path id: string): void | Error;
 
   /** Analyze a widget */
-  @route("{id}/analyze") @post analyze(@path id: string): AnalyzeResult | Error;
+  @route("/{id}/analyze") @post analyze(@path id: string): AnalyzeResult | Error;
 }

@@ -85,7 +85,7 @@
     "/widgets/{id}": {
       "get": {
         "operationId": "Widgets_read",
-        "description": "Read widgets",
+        "description": "Read a widget",
         "parameters": [
           {
             "name": "id",

@@ -29,7 +29,7 @@ export interface paths {
             path?: never;
             cookie?: never;
         };
-        /** @description Read widgets */
+        /** @description Read a widget */
         get: operations["Widgets_read"];
         put?: never;
         post?: never;
